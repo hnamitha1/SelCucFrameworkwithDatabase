@@ -3,6 +3,7 @@ package com.SeleniumCucuDataBase.testBase;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
@@ -13,11 +14,15 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.ie.InternetExplorerOptions;
 
+import com.SeleniumCucuDataBase.helper.LoggerHelper;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
 	public WebDriver driver;
 	public static Properties properties;
+	Logger logger = LoggerHelper.getLogger(LoggerHelper.class);
+
 	
 	public  void browserSetUp() {
 		
@@ -39,7 +44,7 @@ public class TestBase {
 				chromeOptions.setHeadless(isHeadless);
 			}
 			driver = new ChromeDriver(chromeOptions);
-			//logger.info(String.format("Identified the browser as %s. Launching the browser in headless %s", browser, isHeadless));
+			logger.info(String.format("Identified the browser as %s. Launching the browser in headless %s", browser, isHeadless));
 			break;
 
 		case "firefox":
@@ -52,7 +57,7 @@ public class TestBase {
 			if (isHeadless)
 				firefoxOptions.addArguments("--headless");
 			driver = new FirefoxDriver(firefoxOptions);
-			//logger.info(String.format("Identified the browser as %s. Launching the browser in headless %s", browser, isHeadless));
+			logger.info(String.format("Identified the browser as %s. Launching the browser in headless %s", browser, isHeadless));
 			break;
 
 		case "ie":
@@ -60,14 +65,14 @@ public class TestBase {
 			InternetExplorerOptions ieOptions = new InternetExplorerOptions();
 			ieOptions.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
 			ieOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
-			//if (isHeadless)
-				//logger.info("IE doesn't support headless ");
+			if (isHeadless)
+				logger.info("IE doesn't support headless ");
 			driver = new InternetExplorerDriver(ieOptions);
-			//logger.info(String.format("Identified the browser as %s. Launching the browser", browser));
+			logger.info(String.format("Identified the browser as %s. Launching the browser", browser));
 			break;
 
 		default:
-		//	logger.info(String.format("Could not identify the browser as %s. Please specify correct browser", browser));
+			logger.info(String.format("Could not identify the browser as %s. Please specify correct browser", browser));
 			break;
 		}
 
@@ -76,6 +81,6 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get(url);
-		//logger.info("Launched the Orange Application");
+		logger.info("Launched the Orange Application");
 	}
 }
