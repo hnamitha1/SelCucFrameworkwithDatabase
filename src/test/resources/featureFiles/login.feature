@@ -13,5 +13,5 @@ Feature: Sign In
     When I enter username as "Admin"
     And I enter password as "admin123"
     And click on login button
-    Then I sould see application homepage
-    And I sould see administrator text message on home Page
+    Then I sould see application homepage with message "Welcome Admin"
+  

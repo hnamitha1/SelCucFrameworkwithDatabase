@@ -24,7 +24,10 @@ public class LoginPage {
 
 	@FindBy(id = "btnLogin")
 	public WebElement loginButton;
-
+	
+	@FindBy(id = "welcome")
+	public WebElement welcomeMessage;
+	
 	public void enterUserName(String userName) {
 		username.sendKeys(userName);
 	}
@@ -35,6 +38,10 @@ public class LoginPage {
 
 	public void clickLoginButton() {
 		loginButton.click();
+	}
+	
+	public String welcomeText() {
+		return welcomeMessage.getText();
 	}
 
 	

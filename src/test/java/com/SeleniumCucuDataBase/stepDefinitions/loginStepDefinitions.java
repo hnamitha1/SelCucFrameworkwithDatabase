@@ -1,6 +1,7 @@
 package com.SeleniumCucuDataBase.stepDefinitions;
 
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 
 import com.SeleniumCucuDataBase.helper.LoggerHelper;
 import com.SeleniumCucuDataBase.helper.WaitHelper;
@@ -45,16 +46,10 @@ public class loginStepDefinitions extends TestBase {
 	    loginPage.clickLoginButton();
 	}
 
-	@Then("I sould see application homepage")
-	public void i_sould_see_application_homepage() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
-
-	@And("I sould see administrator text message on home Page")
-	public void i_sould_see_administrator_text_message_on_home_Page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	@Then("^I sould see application homepage with message \"([^\"]*)\"$")
+	public void i_sould_see_application_homepage_with_message(String expectedMessage) {
+		String actualMessage = loginPage.welcomeText();
+	    Assert.assertEquals(actualMessage, expectedMessage);
 	}
 
 

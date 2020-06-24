@@ -58,3 +58,4 @@ TestReports/
 bin/
 /allure-results/
 /src/
+/automation.out
