@@ -10,8 +10,8 @@ Feature: Sign In
 
    @sanity
   Scenario: Sign In with valid credential
-    When I enter username 
-    And I enter password 
+    When I enter username as "Admin"
+    And I enter password as "admin123"
     And click on login button
     Then I sould see application homepage
     And I sould see administrator text message on home Page
