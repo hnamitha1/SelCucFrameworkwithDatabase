@@ -1,9 +1,14 @@
 package com.SeleniumCucuDataBase.testBase;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
@@ -19,9 +24,23 @@ import com.SeleniumCucuDataBase.helper.LoggerHelper;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestBase {
-	public WebDriver driver;
+	public static WebDriver driver;
 	public static Properties properties;
-	Logger logger = LoggerHelper.getLogger(LoggerHelper.class);
+	Logger logger = LoggerHelper.getLogger(TestBase.class);
+	
+	public TestBase() {
+		properties = new Properties();
+		try {
+			InputStream inputStream = new FileInputStream("./src/test/resources/ConfigProperties/config.property");
+			try {
+				properties.load(inputStream);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 
 	
 	public  void browserSetUp() {

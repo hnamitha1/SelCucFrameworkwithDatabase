@@ -11,7 +11,7 @@ private static boolean root=false;
 		if(root){
 			return Logger.getLogger(cls);
 		}
-		PropertyConfigurator.configure("src\\test\\resources\\ConfigProperties\\log4j.properties");
+		PropertyConfigurator.configure("src\\test\\resources\\ConfigProperties\\log4j.proprerties");
 		root = true;
 		return Logger.getLogger(cls);
 	}
