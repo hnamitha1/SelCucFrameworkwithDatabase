@@ -1,8 +1,12 @@
 package com.SeleniumCucuDataBase.stepDefinitions;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 
+import com.SeleniumCucuDataBase.helper.DatabaseHelper;
 import com.SeleniumCucuDataBase.helper.LoggerHelper;
 import com.SeleniumCucuDataBase.helper.WaitHelper;
 import com.SeleniumCucuDataBase.pageObjects.LoginPage;
@@ -15,6 +19,7 @@ import io.cucumber.java.en.When;
 
 public class loginStepDefinitions extends TestBase {
 	
+	DatabaseHelper databaseHelper;
 	WaitHelper waitHelper; 
 	LoginPage loginPage = new LoginPage(driver);
 	Logger logger = LoggerHelper.getLogger(loginStepDefinitions.class);
@@ -31,14 +36,18 @@ public class loginStepDefinitions extends TestBase {
 		loginPage.username.isDisplayed();
 	}
 
-	@When("^I enter username as \"([^\"]*)\"$")
-	public void i_enter_username(String username) {
-		loginPage.enterUserName(username);
+	@When("I enter username")
+	public void i_enter_username() throws SQLException {
+		ResultSet rs = databaseHelper.getConnection();
+		while(rs.next())
+			loginPage.enterUserName(rs.getString("user_name"));
 	}
 
-	@And("^I enter password as \"([^\"]*)\"$")
-	public void i_enter_password(String password) {
-	    loginPage.enterPassword(password);
+	@And("I enter password")
+	public void i_enter_password() throws SQLException {
+		ResultSet rs = databaseHelper.getConnection();
+		while(rs.next())
+			loginPage.enterPassword(rs.getString("user_password"));
 	}
 
 	@And("click on login button")
