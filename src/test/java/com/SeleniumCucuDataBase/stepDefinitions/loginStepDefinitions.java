@@ -2,6 +2,7 @@ package com.SeleniumCucuDataBase.stepDefinitions;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Base64;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
@@ -37,7 +38,7 @@ public class loginStepDefinitions extends TestBase {
 	}
 
 	@When("I enter username")
-	public void i_enter_username() throws SQLException {
+	public void i_enter_username() throws SQLException, ClassNotFoundException {
 		System.out.println("namitha");
 		ResultSet rs = databaseHelper.getConnection();
 		System.out.println("namitha1");
@@ -46,10 +47,8 @@ public class loginStepDefinitions extends TestBase {
 	}
 
 	@And("I enter password")
-	public void i_enter_password() throws SQLException {
-		ResultSet rs = databaseHelper.getConnection();
-		while(rs.next())
-			loginPage.enterPassword(rs.getString("user_password"));
+	public void i_enter_password(){
+				loginPage.enterPassword("namitha123");
 	}
 
 	@And("click on login button")

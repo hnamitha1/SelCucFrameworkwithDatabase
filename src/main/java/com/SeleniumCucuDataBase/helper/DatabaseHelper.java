@@ -17,7 +17,7 @@ public class DatabaseHelper {
 	public static Properties properties;
 	Logger logger = LoggerHelper.getLogger(DatabaseHelper.class);
 	
-	public ResultSet getConnection() throws SQLException {
+	public ResultSet getConnection() throws SQLException, ClassNotFoundException {
 		logger.info("waiting for database connection");
 		properties = new Properties();
 		try {
@@ -30,19 +30,23 @@ public class DatabaseHelper {
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
+		String driver = "com.mysql.jdbc.Driver";
 		String url = properties.getProperty("url");
 		String username = properties.getProperty("username");
 		String password = properties.getProperty("password");
+		System.setProperty(driver,"");
+		
+		Class.forName("com.mysql.jdbc.Driver");
 		logger.info("database connection established" + url);
 		Connection con = DriverManager.getConnection(url,username,password);
 		Statement s = con.createStatement();
 		
-		return s.executeQuery("select * from ohrm_user where 1");
+		 return s.executeQuery("select * from ohrm_user where 1");
 		
 	}
 	
-	public static void main() throws SQLException {
-		DatabaseHelper database = null;
-		System.out.println(database.getConnection());
+	public static void main(String[] args) throws SQLException, ClassNotFoundException {
+		DatabaseHelper database = new DatabaseHelper();;
+		database.getConnection();
 	}
 }
