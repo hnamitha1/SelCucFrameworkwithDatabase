@@ -19,7 +19,7 @@ import io.cucumber.java.en.When;
 
 public class loginStepDefinitions extends TestBase {
 	
-	DatabaseHelper databaseHelper;
+	DatabaseHelper databaseHelper = new DatabaseHelper();
 	WaitHelper waitHelper; 
 	LoginPage loginPage = new LoginPage(driver);
 	Logger logger = LoggerHelper.getLogger(loginStepDefinitions.class);

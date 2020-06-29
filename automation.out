@@ -1,7 +1,9 @@
-2020-06-26 18:06:212 INFO  ServiceHooks:24 - Initializing test
-2020-06-26 18:06:128 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
-2020-06-26 18:06:308 INFO  TestBase:102 - Launched the Orange Application
-2020-06-26 18:06:377 INFO  WaitHelper:20 - waiting for element visibilityOf..
-2020-06-26 18:06:245 INFO  WaitHelper:23 - element is visible..
-2020-06-26 18:06:246 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
-2020-06-26 18:06:327 INFO  ServiceHooks:34 - Sign In with valid credential is Failed
+2020-06-29 11:06:92 INFO  ServiceHooks:24 - Initializing test
+2020-06-29 11:06:250 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
+2020-06-29 11:06:617 INFO  TestBase:102 - Launched the Orange Application
+2020-06-29 11:06:698 INFO  WaitHelper:20 - waiting for element visibilityOf..
+2020-06-29 11:06:707 INFO  WaitHelper:23 - element is visible..
+2020-06-29 11:06:708 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
+2020-06-29 11:06:790 INFO  DatabaseHelper:21 - waiting for database connection
+2020-06-29 11:06:792 INFO  DatabaseHelper:36 - database connection established"jdbc:mysql://localhost:3307/bitnami_orangehrm";
+2020-06-29 11:06:852 INFO  ServiceHooks:34 - Sign In with valid credential is Failed
