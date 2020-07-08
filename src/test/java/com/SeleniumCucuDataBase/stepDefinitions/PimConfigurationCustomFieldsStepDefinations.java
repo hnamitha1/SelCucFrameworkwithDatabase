@@ -1,6 +1,7 @@
 package com.SeleniumCucuDataBase.stepDefinitions;
 
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 
 import com.SeleniumCucuDataBase.helper.LoggerHelper;
 import com.SeleniumCucuDataBase.pageObjects.LoginPage;
@@ -44,16 +45,12 @@ public class PimConfigurationCustomFieldsStepDefinations extends TestBase{
 	    Thread.sleep(3000);
 	}
 
-	@Then("I should see Custom Field creation success message")
-	public void i_should_see_Custom_Field_creation_success_message() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	@Then("I should see Custom Field Name")
+	public void i_should_see_Custom_Field_Name() {
+		boolean value = pimConfigurationCustomFieldsPages.returnCustomFieldLink();
+	    Assert.assertTrue(value, "The Custom field is created");
+	   
 	}
 
-	@And("I should verify leads information")
-	public void i_should_verify_leads_information() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
-	}
 
 }

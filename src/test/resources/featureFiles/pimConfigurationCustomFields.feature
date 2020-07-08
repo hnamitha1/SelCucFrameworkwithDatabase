@@ -14,5 +14,11 @@ Feature: Custom Field Creation
     And I select Screen As "Personal Details"
     And I select Type as "Text or Number"
     And I click on Save button
-    Then I should see Custom Field creation success message
-    And I should verify leads information
+    Then I should see Custom Field Name
+    
+ Scenario: Delete Custom Fields cretaed 
+ 		When I click on Custom Fields link
+ 		And I can select check box
+ 		When I can click on Delete
+ 		And I need to see the confirmation box "OrangeHRM - Confirmation Required"
+ 		Then click 

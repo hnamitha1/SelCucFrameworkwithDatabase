@@ -40,6 +40,18 @@ public class PimConfigurationCustomFieldsPages {
 	@FindBy(id="btnSave")
 	public WebElement btnSave;
 	
+	@FindBy(linkText="Custom Field Name")
+	public WebElement customLinkText;
+	
+	@FindBy(id="bottonAdd")
+	public WebElement addButton;
+	
+	@FindBy(id="buttonRemove")
+	public WebElement deleteButton;
+	
+	@FindBy(id="customFieldList")
+	public WebElement customFieldTable;
+	
 	Select select;
 	
 	public void clickButtonFields() throws InterruptedException {
@@ -68,8 +80,16 @@ public class PimConfigurationCustomFieldsPages {
 		btnSave.click();
 	}
 	
+	public boolean returnCustomFieldLink() {
+		return customLinkText.isDisplayed();
+	}
 	
+	public void addButton() {
+		addButton.click();
+	}
 	
+	public void deleteButton() {
+		deleteButton.click();
+	}
 	
-
 }
