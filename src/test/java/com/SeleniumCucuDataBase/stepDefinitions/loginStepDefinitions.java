@@ -2,7 +2,6 @@ package com.SeleniumCucuDataBase.stepDefinitions;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Base64;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;

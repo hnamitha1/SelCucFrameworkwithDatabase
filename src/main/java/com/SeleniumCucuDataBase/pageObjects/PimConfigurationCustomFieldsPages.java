@@ -52,6 +52,21 @@ public class PimConfigurationCustomFieldsPages {
 	@FindBy(id="customFieldList")
 	public WebElement customFieldTable;
 	
+	@FindBy(id="allCheck")
+	public WebElement checkboxCustomFieldList;
+	
+	@FindBy(xpath="//*[@id=\"customFieldListPane\"]/div[1]/h1")
+	public WebElement definedCustomFields;
+	
+	@FindBy(xpath= "//*[@id=\"deleteConfModal\"]/div[1]/h3")
+	public WebElement deleteConfirmationMessage; 
+	
+	@FindBy(id="dialogDeleteBtn")
+	public WebElement dialogDeleteButton;
+	
+	@FindBy(id="heading")
+	public WebElement addCustomField;
+	
 	Select select;
 	
 	public void clickButtonFields() throws InterruptedException {
@@ -92,4 +107,23 @@ public class PimConfigurationCustomFieldsPages {
 		deleteButton.click();
 	}
 	
+	public String textDefinedCustomFields() {
+		return definedCustomFields.getText();
+	}
+	
+	public String textDeleteConfirmationMessage() {
+		return deleteConfirmationMessage.getText();
+	}
+	
+	public void dialogDeleteButton() {
+		dialogDeleteButton.click();
+	}
+	
+	public String textAddCustomField() {
+		return addCustomField.getText();
+	}
+	
+	public void clickCheckboxCustomFieldList() {
+		checkboxCustomFieldList.click();
+	}
 }

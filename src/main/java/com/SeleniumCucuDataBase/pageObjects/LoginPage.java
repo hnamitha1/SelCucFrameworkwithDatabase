@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import com.SeleniumCucuDataBase.helper.WaitHelper;
-
 public class LoginPage {
 	
 	private WebDriver driver;
