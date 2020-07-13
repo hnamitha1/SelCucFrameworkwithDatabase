@@ -12,6 +12,7 @@ Feature: performance mangae reviews
     When I click on Manage Reviews link
     And Click on Add Button
     And Enter the employee name as "Fiona Grace"
+    And Enter the supervisor name as "John Smith"
     And Enter the work period start date as "2019-05-02"
     And Enter the work period end date as "2020-07-01"
     And Enter the due date as "2020-07-30"

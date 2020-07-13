@@ -1,27 +1,15 @@
-2020-07-09 13:07:287 INFO  ServiceHooks:24 - Initializing test
-2020-07-09 13:07:470 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
-2020-07-09 13:07:639 INFO  TestBase:102 - Launched the Orange Application
-2020-07-09 13:07:703 INFO  WaitHelper:20 - waiting for element visibilityOf..
-2020-07-09 13:07:344 INFO  WaitHelper:23 - element is visible..
-2020-07-09 13:07:345 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
-2020-07-09 13:07:397 INFO  DatabaseHelper:21 - waiting for database connection
-2020-07-09 13:07:417 INFO  DatabaseHelper:40 - database connection establishedjdbc:mysql://localhost:3307/bitnami_orangehrm
-2020-07-09 13:07:970 INFO  ServiceHooks:44 - Sign In with valid credential is pass
-2020-07-09 13:07:390 INFO  ServiceHooks:24 - Initializing test
-2020-07-09 13:07:690 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
-2020-07-09 13:07:845 INFO  TestBase:102 - Launched the Orange Application
-2020-07-09 13:07:847 INFO  WaitHelper:20 - waiting for element visibilityOf..
-2020-07-09 13:07:416 INFO  WaitHelper:23 - element is visible..
-2020-07-09 13:07:417 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
-2020-07-09 13:07:418 INFO  DatabaseHelper:21 - waiting for database connection
-2020-07-09 13:07:420 INFO  DatabaseHelper:40 - database connection establishedjdbc:mysql://localhost:3307/bitnami_orangehrm
-2020-07-09 13:07:15 INFO  ServiceHooks:44 - Create Custom Fields is pass
-2020-07-09 13:07:240 INFO  ServiceHooks:24 - Initializing test
-2020-07-09 13:07:543 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
-2020-07-09 13:07:696 INFO  TestBase:102 - Launched the Orange Application
-2020-07-09 13:07:698 INFO  WaitHelper:20 - waiting for element visibilityOf..
-2020-07-09 13:07:228 INFO  WaitHelper:23 - element is visible..
-2020-07-09 13:07:228 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
-2020-07-09 13:07:229 INFO  DatabaseHelper:21 - waiting for database connection
-2020-07-09 13:07:230 INFO  DatabaseHelper:40 - database connection establishedjdbc:mysql://localhost:3307/bitnami_orangehrm
-2020-07-09 13:07:531 INFO  ServiceHooks:44 - Delete Custom Fields cretaed is pass
+2020-07-13 22:07:868 INFO  ServiceHooks:24 - Initializing test
+2020-07-13 22:07:731 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
+2020-07-13 22:07:924 INFO  TestBase:102 - Launched the Orange Application
+2020-07-13 22:07:988 INFO  WaitHelper:20 - waiting for element visibilityOf..
+2020-07-13 22:07:801 INFO  WaitHelper:23 - element is visible..
+2020-07-13 22:07:805 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
+2020-07-13 22:07:655 INFO  ServiceHooks:44 - create review employee is pass
+2020-07-13 22:07:208 INFO  ServiceHooks:24 - Initializing test
+2020-07-13 22:07:853 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
+2020-07-13 22:07:11 INFO  TestBase:102 - Launched the Orange Application
+2020-07-13 22:07:15 INFO  WaitHelper:20 - waiting for element visibilityOf..
+2020-07-13 22:07:883 INFO  WaitHelper:23 - element is visible..
+2020-07-13 22:07:883 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
+2020-07-13 22:07:229 INFO  ServiceHooks:34 - Search employee to evaluate is Failed
+2020-07-13 22:07:71 INFO  ServiceHooks:24 - Initializing test

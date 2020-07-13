@@ -1,7 +1,9 @@
 package com.SeleniumCucuDataBase.pageObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,6 +15,15 @@ public class PerformanceManageReviews {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(id = "menu__Performance")
+	public WebElement menuPerformance;
+	
+	@FindBy(id="menu_performance_ManageReviews")
+	public WebElement menuPerformanceManageReviews;
+	
+	@FindBy(id="menu_performance_searchPerformancReview")
+	public WebElement menuPerformanceSearchPerformanceReview;
 
 	@FindBy(id="btnAdd")
 	public WebElement addButton;
@@ -41,4 +52,45 @@ public class PerformanceManageReviews {
 	@FindBy(id="backBtn")
 	public WebElement backButton;
 	
+	public void clickButtonFields() throws InterruptedException {
+		Actions action = new Actions(driver);
+		action.moveToElement(menuPerformance).build().perform();
+		Thread.sleep(2000);
+		action.moveToElement(menuPerformanceManageReviews).build().perform();
+		menuPerformanceSearchPerformanceReview.click();
+	}
+	
+	public void clickAddButton() {
+		addButton.click();
+	}
+	public void enterEmployeeName(String name) {
+		employeeName.sendKeys(name);
+		employeeName.sendKeys(Keys.RETURN);
+	}
+	
+	public void enterSupervisorName(String name) {
+		supervisorReviewerName.sendKeys(name);
+	}
+	
+	public void enterWorkPeriodStartDate(String date) {
+		workPeriodStartDate.clear();
+		workPeriodStartDate.sendKeys(date);
+		workPeriodStartDate.sendKeys(Keys.RETURN);
+	}
+	
+	public void enterWorkPeriodEndDate(String date) {
+		workPeriodEndDate.clear();
+		workPeriodEndDate.sendKeys(date);
+		workPeriodEndDate.sendKeys(Keys.RETURN);
+	}
+	
+	public void enterDueDate(String date) {
+		dueDate.clear();
+		//dueDate.sendKeys(date);
+		//dueDate.sendKeys(Keys.RETURN);
+	}
+	
+	public void clickActivateButton() {
+		activateButton.click();
+	}
 }

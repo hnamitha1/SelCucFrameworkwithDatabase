@@ -37,10 +37,8 @@ public class loginStepDefinitions extends TestBase {
 	}
 
 	@When("I enter username")
-	public void i_enter_username() throws SQLException, ClassNotFoundException {
-		ResultSet rs = databaseHelper.getConnection();
-		while(rs.next())
-			loginPage.enterUserName(rs.getString("user_name"));
+	public void i_enter_username() {
+		loginPage.enterUserName("namitha");
 	}
 
 	@And("I enter password")

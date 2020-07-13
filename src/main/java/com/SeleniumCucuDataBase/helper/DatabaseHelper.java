@@ -41,7 +41,7 @@ public class DatabaseHelper {
 		Connection con = DriverManager.getConnection(url,username,password);
 		Statement s = con.createStatement();
 		
-		 return s.executeQuery("select * from ohrm_user where 1");
+		 return s.executeQuery("select * from ohrm_user where user_name = username");
 		
 	}
 	
