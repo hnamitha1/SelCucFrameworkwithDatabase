@@ -7,7 +7,6 @@ import com.SeleniumCucuDataBase.helper.LoggerHelper;
 import com.SeleniumCucuDataBase.pageObjects.PerformanceManageReviews;
 import com.SeleniumCucuDataBase.testBase.TestBase;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
