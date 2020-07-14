@@ -1,6 +1,7 @@
 package com.SeleniumCucuDataBase.stepDefinitions;
 
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 
 import com.SeleniumCucuDataBase.helper.LoggerHelper;
 import com.SeleniumCucuDataBase.pageObjects.PerformanceManageReviews;
@@ -57,99 +58,95 @@ public class PerformanceManageReviewsStepDefinations extends TestBase{
 	}
 
 	@Then("^check the status of the employee to be changed to \"([^\"]*)\"$")
-	public void check_the_status_of_the_employee_to_be_changed_to(String arg1) throws Throwable {
-	    Thread.sleep(3000);
-	    System.out.println("status changed");
+	public void check_the_status_of_the_employee_to_be_changed_to(String expectedResult) throws Throwable {
+		String actualResult = performanceManageReviews.getStatus();
+		System.out.println(actualResult);
+		Assert.assertEquals(actualResult, expectedResult);
 	}
 
-	@When("^Enter employee name as \"([^\"]*)\"$")
-	public void enter_employee_name_as(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	@When("^look for employee name as \"([^\"]*)\"$")
+	public void enter_employee_name_as(String expectedResult) throws Throwable {
+		String actualResult = performanceManageReviews.getEmployeeName();
+		System.out.println(actualResult);
+		Assert.assertEquals(actualResult, expectedResult);
 	}
 
 	@When("^click on Evaluate$")
 	public void click_on_Evaluate() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    performanceManageReviews.clickEvaluate();
 	}
 
 	@When("^enter the rating as \"([^\"]*)\"$")
 	public void enter_the_rating_as(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   // performanceManageReviews.enterRating(arg1);
 	}
 
 	@When("^Enter the final comment as \"([^\"]*)\"$")
 	public void enter_the_final_comment_as(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    performanceManageReviews.enterFinalComment(arg1);
 	}
 
 	@When("^enter the fina rating as \"([^\"]*)\"$")
 	public void enter_the_fina_rating_as(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    performanceManageReviews.enterFinalRating(arg1);
 	}
 
 	@When("^enter the complete date as \"([^\"]*)\"$")
 	public void enter_the_complete_date_as(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    performanceManageReviews.enterEndDate(arg1);
 	}
 
 	@Then("^click on Complete$")
 	public void click_on_Complete() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   performanceManageReviews.clickCompleteButton();
 	}
 
 	@Then("^pop up of OrangeHRM confirmation Required will come$")
 	public void pop_up_of_OrangeHRM_confirmation_Required_will_come() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	   
 	}
 
 	@Then("^click on okie$")
 	public void click_on_okie() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+		 performanceManageReviews.clickOkButton();
 	}
 
 	@Then("^Click on back$")
 	public void click_on_back() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    performanceManageReviews.clickBackButton();
+	    Thread.sleep(3000);
 	}
 
 	@Then("^verify the status changed to \"([^\"]*)\"$")
-	public void verify_the_status_changed_to(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	public void verify_the_status_changed_to(String expectedResult) throws Throwable {
+		String actualResult = performanceManageReviews.getStatus();
+		System.out.println(actualResult);
+		Assert.assertEquals(actualResult, expectedResult);
+		Thread.sleep(3000);
 	}
 
-	@When("^select Fiona Grace$")
-	public void select_Fiona_Grace() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	@When("^select employee \"([^\"]*)\"$")
+	public void select_employee(String arg1) throws Throwable {
+	   performanceManageReviews.checkSelectBox();
+	   Thread.sleep(1000);
 	}
 
 	@When("^click on Delete$")
 	public void click_on_Delete() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    performanceManageReviews.clickDeleteButton();
 	}
 
 	@Then("^Pop up will come and click on okie$")
 	public void pop_up_will_come_and_click_on_okie() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	    performanceManageReviews.clickOkDeleteButton();
+	    Thread.sleep(3000);
 	}
 
-	@Then("^verify the record should not be in table$")
-	public void verify_the_record_should_not_be_in_table() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
+	@Then("^verify the message \"([^\"]*)\"$")
+	public void verify_the_message(String expectedResult) throws Throwable {
+		String actualResult = performanceManageReviews.getNoRecordMessage();
+		System.out.println(actualResult);
+		Assert.assertEquals(actualResult, expectedResult);
 	}
 
 }

@@ -49,8 +49,44 @@ public class PerformanceManageReviews {
 	@FindBy(id="activateBtn")
 	public WebElement activateButton;
 	
+	@FindBy(xpath="//*[@id=\"resultTable\"]/tbody/tr/td[6]")
+	public WebElement status;
+	
+	@FindBy(xpath="//*[@id=\"resultTable\"]/tbody/tr/td[2]")
+	public WebElement tableEmployeeName;
+	
+	@FindBy(xpath="//*[@id=\"resultTable\"]/tbody/tr/td[7]/a")
+	public WebElement evaluate;
+	
+	@FindBy(id="reviewEvaluation_hrAdminComments")
+	public WebElement finalComment;
+	
+	@FindBy(id="reviewEvaluation_finalRating")
+	public WebElement finalRating;
+	
+	@FindBy(id="saveReview360Form_workPeriodStartDate")
+	public WebElement endDate;
+	
+	@FindBy(id="completeBtn")
+	public WebElement completeButton;
+	
+	@FindBy(id="dialogDeleteBtn")
+	public WebElement okButton;
+	
 	@FindBy(id="backBtn")
 	public WebElement backButton;
+	
+	@FindBy(id="ohrmList_chkSelectAll")
+	public WebElement checkSelectAll;
+	
+	@FindBy(id="btnDelete")
+	public WebElement deleteButton;
+	
+	@FindBy(id="dialogDeleteBtn")
+	public WebElement okDeleteButton;
+	
+	@FindBy(xpath="//*[@id=\"resultTable\"]/tbody/tr/td")
+	public WebElement noRecordMessage;
 	
 	public void clickButtonFields() throws InterruptedException {
 		Actions action = new Actions(driver);
@@ -63,17 +99,21 @@ public class PerformanceManageReviews {
 	public void clickAddButton() {
 		addButton.click();
 	}
+	
 	public void enterEmployeeName(String name) {
 		employeeName.sendKeys(name);
 		employeeName.sendKeys(Keys.RETURN);
 	}
 	
-	public void enterSupervisorName(String name) {
+	public void enterSupervisorName(String name) throws InterruptedException {
 		supervisorReviewerName.sendKeys(name);
+		//Thread.sleep(3000);
+		supervisorReviewerName.sendKeys(Keys.ENTER);
 	}
 	
 	public void enterWorkPeriodStartDate(String date) {
-		workPeriodStartDate.clear();
+		//workPeriodStartDate.clear();
+		workPeriodStartDate.click();
 		workPeriodStartDate.sendKeys(date);
 		workPeriodStartDate.sendKeys(Keys.RETURN);
 	}
@@ -86,11 +126,66 @@ public class PerformanceManageReviews {
 	
 	public void enterDueDate(String date) {
 		dueDate.clear();
-		//dueDate.sendKeys(date);
-		//dueDate.sendKeys(Keys.RETURN);
+		dueDate.sendKeys(date);
+		dueDate.sendKeys(Keys.RETURN);
 	}
 	
 	public void clickActivateButton() {
 		activateButton.click();
 	}
+	
+	public String getStatus() {
+		return status.getText();
+	}
+	
+	public String getEmployeeName() {
+		return tableEmployeeName.getText();
+	}
+	
+	public void clickEvaluate() {
+		evaluate.click();
+	}
+	
+	public void enterFinalComment(String value) {
+		finalComment.sendKeys(value);
+	}
+	
+	public void enterFinalRating(String value) {
+		finalRating.sendKeys(value);
+	}
+	
+	public void enterEndDate(String date) {
+		endDate.clear();
+		endDate.sendKeys(date);
+		endDate.sendKeys(Keys.RETURN);
+	}
+	
+	public void clickCompleteButton() {
+		completeButton.click();
+	}
+	
+	public void clickOkButton() {
+		okButton.click();
+	}
+	
+	public void clickBackButton() {
+		backButton.click();
+	}
+	
+	public void checkSelectBox() {
+		checkSelectAll.click();
+	}
+	
+	public void clickDeleteButton() {
+		deleteButton.click();
+	}
+	
+	public void clickOkDeleteButton() {
+		okDeleteButton.click();
+	}
+	
+	public String getNoRecordMessage() {
+		return noRecordMessage.getText();
+	}
+	
 }

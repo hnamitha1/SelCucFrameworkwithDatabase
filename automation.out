@@ -1,15 +1,21 @@
-2020-07-13 22:07:868 INFO  ServiceHooks:24 - Initializing test
-2020-07-13 22:07:731 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
-2020-07-13 22:07:924 INFO  TestBase:102 - Launched the Orange Application
-2020-07-13 22:07:988 INFO  WaitHelper:20 - waiting for element visibilityOf..
-2020-07-13 22:07:801 INFO  WaitHelper:23 - element is visible..
-2020-07-13 22:07:805 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
-2020-07-13 22:07:655 INFO  ServiceHooks:44 - create review employee is pass
-2020-07-13 22:07:208 INFO  ServiceHooks:24 - Initializing test
-2020-07-13 22:07:853 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
-2020-07-13 22:07:11 INFO  TestBase:102 - Launched the Orange Application
-2020-07-13 22:07:15 INFO  WaitHelper:20 - waiting for element visibilityOf..
-2020-07-13 22:07:883 INFO  WaitHelper:23 - element is visible..
-2020-07-13 22:07:883 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
-2020-07-13 22:07:229 INFO  ServiceHooks:34 - Search employee to evaluate is Failed
-2020-07-13 22:07:71 INFO  ServiceHooks:24 - Initializing test
+2020-07-15 00:07:792 INFO  ServiceHooks:24 - Initializing test
+2020-07-15 00:07:410 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
+2020-07-15 00:07:584 INFO  TestBase:102 - Launched the Orange Application
+2020-07-15 00:07:651 INFO  WaitHelper:20 - waiting for element visibilityOf..
+2020-07-15 00:07:325 INFO  WaitHelper:23 - element is visible..
+2020-07-15 00:07:326 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
+2020-07-15 00:07:450 INFO  ServiceHooks:44 - create review employee is pass
+2020-07-15 00:07:848 INFO  ServiceHooks:24 - Initializing test
+2020-07-15 00:07:213 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
+2020-07-15 00:07:371 INFO  TestBase:102 - Launched the Orange Application
+2020-07-15 00:07:372 INFO  WaitHelper:20 - waiting for element visibilityOf..
+2020-07-15 00:07:909 INFO  WaitHelper:23 - element is visible..
+2020-07-15 00:07:910 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
+2020-07-15 00:07:61 INFO  ServiceHooks:44 - Search employee to evaluate is pass
+2020-07-15 00:07:327 INFO  ServiceHooks:24 - Initializing test
+2020-07-15 00:07:691 INFO  TestBase:65 - Identified the browser as chrome. Launching the browser in headless false
+2020-07-15 00:07:852 INFO  TestBase:102 - Launched the Orange Application
+2020-07-15 00:07:854 INFO  WaitHelper:20 - waiting for element visibilityOf..
+2020-07-15 00:07:581 INFO  WaitHelper:23 - element is visible..
+2020-07-15 00:07:583 INFO  loginStepDefinitions:31 - We are in login page of Orange hrm Application
+2020-07-15 00:07:917 INFO  ServiceHooks:44 - delete employee records is pass

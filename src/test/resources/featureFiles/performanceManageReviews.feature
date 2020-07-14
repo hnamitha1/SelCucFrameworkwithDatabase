@@ -7,8 +7,7 @@ Feature: performance mangae reviews
     And I enter password
     And click on login button
     
-   
-   Scenario: create review employee
+  Scenario: create review employee
     When I click on Manage Reviews link
     And Click on Add Button
     And Enter the employee name as "Fiona Grace"
@@ -18,10 +17,10 @@ Feature: performance mangae reviews
     And Enter the due date as "2020-07-30"
     And click on activate
     Then check the status of the employee to be changed to "Activated"
-    
-    Scenario: Search employee to evaluate 
+
+Scenario: Search employee to evaluate 
     When I click on Manage Reviews link
-    And  Enter employee name as "Fiona Grace"
+    And  look for employee name as "Fiona Grace"
     And click on Evaluate
     And enter the rating as "5"
     And Enter the final comment as "Satisfactory"
@@ -33,12 +32,12 @@ Feature: performance mangae reviews
     Then Click on back
     Then verify the status changed to "Approved"
     
-    Scenario: delete employee records
+    
+   Scenario: delete employee records
     When I click on Manage Reviews link
-    And select Fiona Grace 
+    And select employee "Fiona Grace" 
     And click on Delete
     Then Pop up will come and click on okie
-    Then verify the record should not be in table
+    Then verify the message "No Records Found"
     
-    
-    
+   
