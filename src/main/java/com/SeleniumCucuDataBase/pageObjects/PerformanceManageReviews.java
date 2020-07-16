@@ -16,6 +16,9 @@ public class PerformanceManageReviews {
 		PageFactory.initElements(driver, this);
 	}
 	
+	//Locators
+	
+	
 	@FindBy(id = "menu__Performance")
 	public WebElement menuPerformance;
 	
@@ -88,10 +91,10 @@ public class PerformanceManageReviews {
 	@FindBy(xpath="//*[@id=\"resultTable\"]/tbody/tr/td")
 	public WebElement noRecordMessage;
 	
-	public void clickButtonFields() throws InterruptedException {
+	//methods
+	public void clickButtonFields() {
 		Actions action = new Actions(driver);
 		action.moveToElement(menuPerformance).build().perform();
-		Thread.sleep(2000);
 		action.moveToElement(menuPerformanceManageReviews).build().perform();
 		menuPerformanceSearchPerformanceReview.click();
 	}
@@ -105,14 +108,12 @@ public class PerformanceManageReviews {
 		employeeName.sendKeys(Keys.RETURN);
 	}
 	
-	public void enterSupervisorName(String name) throws InterruptedException {
+	public void enterSupervisorName(String name) {
 		supervisorReviewerName.sendKeys(name);
-		//Thread.sleep(3000);
 		supervisorReviewerName.sendKeys(Keys.ENTER);
 	}
 	
 	public void enterWorkPeriodStartDate(String date) {
-		//workPeriodStartDate.clear();
 		workPeriodStartDate.click();
 		workPeriodStartDate.sendKeys(date);
 		workPeriodStartDate.sendKeys(Keys.RETURN);
